@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 /**
@@ -43,7 +45,9 @@ public class ContatoAdapter extends ArrayAdapter<Contato> {
         txtNome.setText(item.getNome());
         txtTelefone.setText(item.getTelefone());
 
-        //TODO: IMPLEMENTAR CODIGO DA IMAGEM
+        Picasso.with(getContext())
+                .load("http://10.0.2.2/ContactsAPI/"+item.getFoto())
+                .into(imgContato);
 
         return v;
     }

@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                                 item.getInt("id"),
                                 item.getString("nome"),
                                 item.getString("telefone"),
-                                ""));
+                                item.getString("imagem")));
                     }
                 }catch(Exception e){
                     Log.e("ERROR", e.getMessage());

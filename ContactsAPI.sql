@@ -12,3 +12,7 @@ INSERT INTO contatos (nome, telefone) VALUES('Lucas', '(11) 65684646');
 INSERT INTO contatos (nome, telefone) VALUES('Ricardo', '(13) 64546565');
 
 SELECT * FROM tbl_contato;
+
+
+/* ADD COLUNA DE IMAGEM */
+ALTER TABLE tbl_contato ADD COLUMN imagem VARCHAR(255);
