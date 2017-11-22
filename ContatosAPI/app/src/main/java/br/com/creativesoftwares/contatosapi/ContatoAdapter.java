@@ -45,8 +45,10 @@ public class ContatoAdapter extends ArrayAdapter<Contato> {
         txtNome.setText(item.getNome());
         txtTelefone.setText(item.getTelefone());
 
+//        String debug = "http://10.0.2.2/ContactsAPI/"+item.getFoto();
+
         Picasso.with(getContext())
-                .load("http://10.0.2.2/ContactsAPI/"+item.getFoto())
+                .load("http://10.0.2.2/ContactsAPI/img/"+item.getFoto())
                 .into(imgContato);
 
         return v;

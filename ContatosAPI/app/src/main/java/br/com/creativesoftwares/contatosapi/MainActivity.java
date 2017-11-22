@@ -1,6 +1,7 @@
 package br.com.creativesoftwares.contatosapi;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -34,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CONTEXT.finish();
-                Snackbar.make(view, "/quit", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
+                // START NEW ACTIVITY TO ADD NEW CONTACT (InserirActivity)
+                startActivity(new Intent(CONTEXT, InserirActivity.class));
             }
         });
         // *******************************************
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         new AsyncTask<Void,Void,Void>(){
             @Override
             protected Void doInBackground(Void... voids) {
-                String retornoJson = Http.get("http://10.0.2.2/ContactsAPI/ContactsAPI.php");
+                String retornoJson = Http.get("http://10.0.2.2/ContactsAPI/contactsAPI.php");
                 Log.d("TAG", retornoJson);
 
                 try{

@@ -9,7 +9,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="br.com.creativesoftwares.contatosapi.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@color/colorAccent">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,6 +18,8 @@
         android:text="Contatos"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginBottom="25dp"
         android:layout_gravity="center_horizontal"/>
 
     <ListView

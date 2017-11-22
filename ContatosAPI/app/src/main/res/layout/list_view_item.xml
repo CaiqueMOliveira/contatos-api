@@ -25,13 +25,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Nome"/>
+            android:text="Nome"
+            android:textColor="@color/colorPrimaryDark"/>
 
         <TextView
             android:id="@+id/txt_telefone_contato"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Telefone"/>
+            android:text="Telefone"
+            android:textColor="@color/colorPrimaryDark"/>
 
     </LinearLayout>
 
